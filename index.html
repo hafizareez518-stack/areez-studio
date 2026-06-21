@@ -147,9 +147,23 @@
     <script>
         document.getElementById('fashionForm').addEventListener('submit', function(e) {
             e.preventDefault(); 
-            <a href="https://wa.me/923464146892" target="_blank" style="background-color: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-    WhatsApp par Order Karein
-</a>
+            <script>
+document.getElementById('fashionForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Form ko page reload karne se rokne ke liye
+    
+    // Aapka WhatsApp link
+    var whatsappUrl = "https://wa.me/923464146892";
+    
+    // User ko naye tab mein WhatsApp par bhejne ke liye
+    window.open(whatsappUrl, '_blank');
+    
+    // Alert message dikhane ke liye
+    alert('Thank you! Areez Creative Studio ko aapki query aur selected package mil gaya hai. Hum jald hi aap se contact karenge.');
+    
+    // Form ko khali karne ke liye
+    this.reset();
+});
+</script>
             alert('Thank you! Areez Creative Studio ko aapki query aur selected package mil gaya hai. Hum jald hi aap se contact karenge.');
             this.reset();
         });
